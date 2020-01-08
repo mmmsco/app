@@ -1,24 +1,35 @@
-import * as express from 'express'
+import * as express from 'express';
+import {Client} from 'pg'
 
 class App {
-  public express
+  public express;
 
 
   constructor() {
-    this.express = express()
-    this.mountRoutes()
+    this.express = express();
+    this.mountRoutes();
   }
 
   private mountRoutes(): void {
-    const router = express.Router()
+    const router = express.Router();
     router.get('/', (req, res) => {
       console.log(req);
       res.json({
-        message: 'Hello World!'
+        message: 'Hello asdf!'
       })
-    })
-    this.express.use('/', router)
+    });
+
+    router.get('/other', (req, res) => {
+      console.log(req);
+      res.json({
+        message: 'asdf zxcv!'
+      })
+    });
+
+    this.express.use('/', router);
+    this.express.use('/other', router);
   }
+
 }
 
 export default new App().express

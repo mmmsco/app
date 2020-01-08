@@ -1,5 +1,5 @@
 function greeter(person) {
-    return "Hello " + person + "!";
+    return "hihi " + person + "!";
 }
 var userName = 'Node Hero';
 console.log(greeter(userName));
