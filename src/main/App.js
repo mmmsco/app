@@ -1,32 +1,19 @@
 import React from 'react';
-import logo from '../assets/logo.svg';
 import '../css/App.css';
 import Navbar from "./components/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export default class App extends React.Component{
-render()
-  {
-    return (
-        <div className="App">
-          <header className="App-header">
-            <Navbar/>
-          </header>
+export default class App extends React.Component {
+    render() {
+        return (
             <div>
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>
-                    {Math.round((new Date()).getTime() / 1000)} Mmms today.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Get cookin'!
-                </a>
+                <header>
+                    <Navbar/>
+                </header>
+
+                get cookin'!
             </div>
-        </div>
-    );
-  }
+        );
+    }
 }
 
