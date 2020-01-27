@@ -1,26 +1,14 @@
 import React from 'react';
-import logo from '../assets/logo.svg';
-import '../css/App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {Math.round((new Date()).getTime() / 1000)} Mmms today.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Get cookin'!
-        </a>
-      </header>
-    </div>
-  );
+import Navbar from "./components/Navbar";
+
+
+export default class App extends React.Component {
+    render() {
+        return (
+            <Navbar/>
+        );
+    }
 }
 
-export default App;
